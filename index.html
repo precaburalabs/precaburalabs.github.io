@@ -1,1 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Precabura Labs | Cada desafio, uma nova solução.</title>
+
+  <meta
+    name="description"
+    content="Precabura Labs é uma empresa brasileira de desenvolvimento de softwares, aplicativos e soluções digitais."
+  >
+
+  <meta name="theme-color" content="#0F1417">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="precabura-labs-simbolo-p.png"
+  >
+
+  <style>
+    :root {
+      --obsidiana: #0F1417;
+      --petroleo: #0E5A66;
+      --cobre: #C67F4E;
+      --marfim: #F5EFE6;
+      --branco: #FFFFFF;
+      --texto: #172126;
+      --texto-suave: #687378;
+      --linha: rgba(15, 20, 23, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--marfim);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 239, 230, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--linha);
+    }
+
+    nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo-header img {
+      width: 215px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--obsidiana);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--cobre);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 82% 32%,
+          rgba(14, 90, 102, 0.12),
+          transparent 31%
+        ),
+        var(--marfim);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(14, 90, 102, 0.10);
+      border-radius: 50%;
+      right: -180px;
+      top: 80px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--petroleo);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--cobre);
+    }
+
+    h1 {
+      color: var(--obsidiana);
+      font-size: clamp(48px, 6.5vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    h1 span {
+      color: var(--petroleo);
+    }
+
+    .hero-text {
+      max-width: 650px;
+      color: var(--texto-suave);
+      font-size: 19px;
+      margin-bottom: 38px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .button-primary {
+      display: inline-block;
+      background: var(--petroleo);
+      color: var(--branco);
+      padding: 15px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button-primary:hover {
+      background: #0A4A54;
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      display: inline-block;
+      color: var(--obsidiana);
+      padding: 14px 5px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--cobre);
+    }
+
+    .hero-symbol {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-symbol::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      background: rgba(255, 255, 255, 0.48);
+      border-radius: 50%;
+    }
+
+    .hero-symbol img {
+      position: relative;
+      z-index: 2;
+      width: min(390px, 90%);
+      filter: drop-shadow(0 28px 35px rgba(15, 20, 23, 0.14));
+    }
+
+    /* SEÇÕES */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--cobre);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      color: var(--obsidiana);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      color: var(--texto-suave);
+      font-size: 17px;
+    }
+
+    /* SOBRE */
+
+    .about {
+      background: var(--branco);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .concept-card {
+      background: var(--obsidiana);
+      color: var(--branco);
+      padding: 52px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .concept-card::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 4px;
+      background: var(--cobre);
+      left: 52px;
+      top: 0;
+    }
+
+    .concept-card h3 {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .concept-card p {
+      color: #BCC6C9;
+    }
+
+    /* PRINCÍPIOS */
+
+    .principles {
+      background: var(--marfim);
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .principle {
+      border-top: 1px solid rgba(15, 20, 23, 0.20);
+      padding-top: 24px;
+    }
+
+    .principle-number {
+      color: var(--cobre);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .principle h3 {
+      color: var(--obsidiana);
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .principle p {
+      color: var(--texto-suave);
+      font-size: 15px;
+    }
+
+    /* PRODUTOS */
+
+    .products {
+      background: var(--petroleo);
+      color: var(--branco);
+    }
+
+    .products .section-label {
+      color: #E2A377;
+    }
+
+    .products .section-title {
+      color: var(--branco);
+    }
+
+    .products .section-text {
+      color: #C5D6D9;
+      max-width: 700px;
+    }
+
+    .product-card {
+      margin-top: 48px;
+      background: var(--branco);
+      color: var(--texto);
+      border-radius: 20px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .product-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      background: #EDF3FF;
+      color: #246BFD;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .product-card h3 {
+      color: var(--obsidiana);
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .product-card p {
+      color: var(--texto-suave);
+    }
+
+    .product-link {
+      color: var(--petroleo);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* CONTATO */
+
+    .contact {
+      background: var(--branco);
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 50px;
+      border-bottom: 1px solid var(--linha);
+      padding-bottom: 70px;
+    }
+
+    .contact-email {
+      color: var(--petroleo);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      background: var(--obsidiana);
+      color: #AEB8BC;
+      padding: 55px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-logo {
+      width: 190px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #D7DDDF;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--cobre);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 80px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .hero-symbol {
+        order: -1;
+      }
+
+      .hero-symbol img {
+        width: 230px;
+      }
+
+      .hero-symbol::before {
+        width: 220px;
+        height: 220px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .product-card {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .logo-header img {
+        width: 175px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .concept-card {
+        padding: 38px 28px;
+      }
+
+      .concept-card::before {
+        left: 28px;
+      }
+
+      .product-card {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+
+      <a href="/" class="logo-header">
+        <img
+          src="precabura-labs-logo-principal.png"
+          alt="Precabura Labs"
+        >
+      </a>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#principios">Nossa visão</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          Tecnologia · Raciocínio · Solução
+        </div>
+
+        <h1>
+          Cada desafio,<br>
+          <span>uma nova solução.</span>
+        </h1>
+
+        <p class="hero-text">
+          Desenvolvemos softwares, aplicativos e produtos digitais
+          que transformam necessidades reais em soluções simples,
+          inteligentes e eficientes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#produtos" class="button-primary">
+            Conheça nossos produtos
+          </a>
+
+          <a href="#sobre" class="button-secondary">
+            Conheça a Precabura
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-symbol">
+        <img
+          src="precabura-labs-simbolo-p.png"
+          alt="Símbolo da Precabura Labs"
+        >
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="container about-grid">
+
+      <div>
+        <div class="section-label">Precabura Labs</div>
+
+        <h2 class="section-title">
+          Tecnologia criada para resolver.
+        </h2>
+
+        <p class="section-text">
+          A Precabura Labs nasce em Fortaleza, Ceará, com o propósito
+          de desenvolver softwares e produtos digitais capazes de
+          transformar desafios cotidianos em soluções práticas.
+          Nosso trabalho combina raciocínio, tecnologia e atenção
+          às necessidades reais de quem utiliza nossos produtos.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>De cada desafio,<br>um novo caminho.</h3>
+
+        <p>
+          O símbolo da Precabura representa movimento e transformação:
+          o caminho entre o desafio e a solução. Uma ideia que orienta
+          a maneira como pensamos, desenvolvemos e evoluímos nossos
+          produtos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="principles" id="principios">
+    <div class="container">
+
+      <div class="section-label">Nossa visão</div>
+
+      <h2 class="section-title">
+        Complexidade por trás.<br>
+        Simplicidade na frente.
+      </h2>
+
+      <div class="principles-grid">
+
+        <div class="principle">
+          <div class="principle-number">01</div>
+          <h3>Raciocínio</h3>
+          <p>
+            Entender profundamente o problema antes de construir
+            a solução.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">02</div>
+          <h3>Tecnologia</h3>
+          <p>
+            Utilizar tecnologia como ferramenta para tornar processos
+            mais inteligentes e eficientes.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">03</div>
+          <h3>Solução</h3>
+          <p>
+            Criar produtos claros, úteis e simples para quem realmente
+            vai utilizá-los.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="products" id="produtos">
+    <div class="container">
+
+      <div class="section-label">Produtos</div>
+
+      <h2 class="section-title">
+        Ideias que viram ferramentas.
+      </h2>
+
+      <p class="section-text">
+        Cada produto da Precabura Labs nasce de uma necessidade concreta
+        e evolui com um objetivo simples: resolver melhor.
+      </p>
+
+      <div class="product-card">
+
+        <div class="product-icon">R$</div>
+
+        <div>
+          <h3>OrçaFácil</h3>
+          <p>
+            Criação e gerenciamento de orçamentos profissionais para
+            autônomos, prestadores de serviços e pequenos negócios.
+          </p>
+        </div>
+
+        <a href="/orcafacil/" class="product-link">
+          Conhecer →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div>
+          <div class="section-label">Contato</div>
+
+          <h2 class="section-title">
+            Vamos transformar<br>
+            o próximo desafio?
+          </h2>
+
+          <p class="section-text">
+            Entre em contato com a Precabura Labs.
+          </p>
+        </div>
+
+        <a
+          class="contact-email"
+          href="mailto:precaburalabs@gmail.com"
+        >
+          precaburalabs@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-top">
+
+      <img
+        class="footer-logo"
+        src="precabura-labs-logo-branco-monocromatico.png"
+        alt="Precabura Labs"
+      >
+
+      <div class="footer-links">
+        <a href="/orcafacil/">OrçaFácil</a>
+        <a href="/orcafacil/privacidade/">Política de Privacidade</a>
+        <a href="/orcafacil/termos/">Termos de Uso</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Precabura Labs. Todos os direitos reservados.</span>
+      <span>Fortaleza · Ceará · Brasil</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
+
+<!-- Versão disponibilizada ao usuário em 25/09/2026 às 03:01. -->
