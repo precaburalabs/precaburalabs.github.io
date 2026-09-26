@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Termos de Uso | Precabura Labs</title>
+
+  <meta
+    name="description"
+    content="Termos de Uso do site institucional da Precabura Labs."
+  >
+
+  <meta name="theme-color" content="#0F1417">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/precabura-labs-simbolo-p.png"
+  >
+
+  <style>
+    :root {
+      --obsidiana: #0F1417;
+      --petroleo: #0E5A66;
+      --cobre: #C67F4E;
+      --marfim: #F5EFE6;
+      --branco: #FFFFFF;
+      --texto: #172126;
+      --texto-suave: #687378;
+      --linha: rgba(15, 20, 23, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--marfim);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245, 239, 230, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--linha);
+    }
+
+    nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo-header img {
+      width: 215px;
+      height: auto;
+    }
+
+    .back-link {
+      color: var(--obsidiana);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--cobre);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      border-bottom: 1px solid var(--linha);
+      background:
+        radial-gradient(
+          circle at 88% 22%,
+          rgba(14, 90, 102, 0.12),
+          transparent 30%
+        ),
+        var(--marfim);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--petroleo);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--cobre);
+    }
+
+    h1 {
+      color: var(--obsidiana);
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 24px;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      color: var(--texto-suave);
+      font-size: 18px;
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 26px;
+      color: var(--petroleo);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    main {
+      background: var(--branco);
+    }
+
+    .terms {
+      padding: 80px 0 100px;
+    }
+
+    .intro-card {
+      background: var(--obsidiana);
+      color: var(--branco);
+      padding: 34px 38px;
+      border-radius: 16px;
+      margin-bottom: 54px;
+      border-top: 4px solid var(--cobre);
+    }
+
+    .intro-card p {
+      color: #D2DADC;
+    }
+
+    .term-section {
+      padding: 0 0 34px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .term-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .term-number {
+      color: var(--cobre);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--obsidiana);
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    ul {
+      margin: 14px 0 0 22px;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    .term-section p,
+    .term-section li {
+      color: var(--texto-suave);
+    }
+
+    .term-section strong {
+      color: var(--texto);
+    }
+
+    .contact-link {
+      color: var(--petroleo);
+      font-weight: 800;
+    }
+
+    footer {
+      background: var(--obsidiana);
+      color: #AEB8BC;
+      padding: 55px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-logo {
+      width: 190px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #D7DDDF;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--cobre);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .logo-header img {
+        width: 175px;
+      }
+
+      .hero {
+        padding: 65px 0 55px;
+      }
+
+      .terms {
+        padding: 55px 0 75px;
+      }
+
+      .intro-card {
+        padding: 28px 24px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 980px);
+      }
+
+      .back-link {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo-header">
+        <img
+          src="/precabura-labs-logo-principal.png"
+          alt="Precabura Labs"
+        >
+      </a>
+
+      <a href="/" class="back-link">← Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Precabura Labs · Legal</div>
+
+    <h1>Termos de Uso</h1>
+
+    <p class="hero-text">
+      Estes Termos estabelecem as condições de acesso e utilização do site
+      institucional da Precabura Labs e de seus conteúdos públicos.
+    </p>
+
+    <span class="updated">Última atualização: 26 de setembro de 2026</span>
+  </div>
+</section>
+
+<main>
+  <div class="container terms">
+
+    <div class="intro-card">
+      <p>
+        Ao acessar ou utilizar este site, você declara ter lido e compreendido
+        estes Termos de Uso. Produtos e aplicativos desenvolvidos pela
+        Precabura Labs podem possuir termos, políticas e condições próprias,
+        que prevalecerão em relação ao uso específico de cada produto.
+      </p>
+    </div>
+
+    <section class="term-section">
+      <div class="term-number">01</div>
+      <h2>Sobre a Precabura Labs</h2>
+      <p>
+        A <strong>Precabura Labs</strong> é uma desenvolvedora brasileira de
+        softwares, aplicativos e soluções digitais, com atuação a partir de
+        Fortaleza, Ceará, Brasil.
+      </p>
+      <p>
+        Este site possui caráter institucional e apresenta informações sobre a
+        Precabura Labs, seus produtos, projetos, canais de contato e documentos
+        relacionados aos serviços disponibilizados pela empresa.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">02</div>
+      <h2>Aceitação dos Termos</h2>
+      <p>
+        O acesso ao site implica concordância com estes Termos naquilo que for
+        aplicável à navegação e utilização de seus conteúdos. Caso você não
+        concorde com alguma condição, poderá deixar de utilizar o site.
+      </p>
+      <p>
+        A utilização de um aplicativo ou produto específico da Precabura Labs
+        poderá exigir a aceitação de termos adicionais próprios daquele
+        produto.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">03</div>
+      <h2>Uso permitido do site</h2>
+      <p>
+        O site deve ser utilizado de forma lícita e compatível com sua
+        finalidade institucional. O usuário compromete-se a não praticar atos
+        que possam comprometer a segurança, disponibilidade, integridade ou
+        funcionamento do site ou de sua infraestrutura.
+      </p>
+      <p>Não é permitido, entre outras condutas:</p>
+      <ul>
+        <li>tentar obter acesso não autorizado a sistemas ou áreas restritas;</li>
+        <li>introduzir código malicioso ou realizar ações destinadas a prejudicar o funcionamento do site;</li>
+        <li>utilizar o conteúdo institucional de forma fraudulenta, enganosa ou que sugira vínculo inexistente com a Precabura Labs;</li>
+        <li>violar direitos de propriedade intelectual da Precabura Labs ou de terceiros.</li>
+      </ul>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">04</div>
+      <h2>Conteúdo e informações</h2>
+      <p>
+        A Precabura Labs procura manter as informações deste site claras e
+        atualizadas. Entretanto, conteúdos institucionais, funcionalidades,
+        características de produtos, disponibilidade, condições comerciais e
+        outros elementos podem ser atualizados, corrigidos, substituídos ou
+        removidos ao longo do tempo.
+      </p>
+      <p>
+        Informações apresentadas no site não devem ser interpretadas como
+        garantia de disponibilidade permanente de determinada funcionalidade,
+        produto ou condição comercial, salvo quando houver compromisso
+        específico estabelecido em documento próprio aplicável ao produto.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">05</div>
+      <h2>Produtos e aplicativos</h2>
+      <p>
+        A Precabura Labs pode disponibilizar diferentes softwares, aplicativos
+        e serviços digitais. Cada produto poderá possuir funcionalidades,
+        requisitos técnicos, modelo comercial, política de privacidade e
+        Termos de Uso específicos.
+      </p>
+      <p>
+        Em caso de divergência entre estes Termos institucionais e os termos de
+        um produto específico, prevalecerão os documentos específicos daquele
+        produto quanto ao seu uso.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">06</div>
+      <h2>Propriedade intelectual</h2>
+      <p>
+        Salvo indicação em contrário, a identidade visual, marcas, nomes,
+        logotipos, símbolos, textos, elementos gráficos, interfaces, materiais
+        institucionais e demais conteúdos próprios apresentados neste site são
+        protegidos pela legislação aplicável e pertencem à Precabura Labs ou
+        são utilizados mediante autorização.
+      </p>
+      <p>
+        O acesso público ao site não concede licença para reprodução,
+        modificação, distribuição, exploração comercial ou utilização da marca
+        Precabura Labs e de seus ativos fora das hipóteses permitidas por lei ou
+        mediante autorização expressa.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">07</div>
+      <h2>Links e serviços de terceiros</h2>
+      <p>
+        O site poderá conter links para lojas de aplicativos, plataformas,
+        serviços ou páginas mantidas por terceiros. Esses ambientes possuem
+        regras, políticas e práticas próprias, que não são controladas pela
+        Precabura Labs.
+      </p>
+      <p>
+        A presença de um link não representa, por si só, responsabilidade da
+        Precabura Labs pelo conteúdo, disponibilidade, segurança ou práticas do
+        serviço externo.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">08</div>
+      <h2>Privacidade e proteção de dados</h2>
+      <p>
+        O tratamento de dados pessoais relacionado aos produtos da Precabura
+        Labs deve observar as respectivas políticas de privacidade e a
+        legislação aplicável, inclusive a Lei Geral de Proteção de Dados
+        Pessoais (LGPD), quando pertinente.
+      </p>
+      <p>
+        Produtos específicos podem utilizar serviços de terceiros e possuir
+        práticas próprias de coleta, armazenamento ou tratamento de dados. As
+        informações correspondentes serão apresentadas nos documentos do
+        respectivo produto.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">09</div>
+      <h2>Disponibilidade do site</h2>
+      <p>
+        A Precabura Labs poderá realizar manutenções, atualizações ou alterações
+        no site a qualquer momento. Embora sejam adotadas medidas razoáveis para
+        manter sua disponibilidade, não se garante funcionamento ininterrupto
+        ou livre de falhas em todas as circunstâncias.
+      </p>
+      <p>
+        Interrupções podem ocorrer em razão de manutenção, falhas técnicas,
+        indisponibilidade de serviços de terceiros, eventos fora do controle
+        razoável da Precabura Labs ou outras circunstâncias operacionais.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">10</div>
+      <h2>Limitação de responsabilidade</h2>
+      <p>
+        Na extensão permitida pela legislação aplicável, a Precabura Labs não
+        será responsável por prejuízos decorrentes do uso inadequado do site,
+        de ações realizadas em desacordo com estes Termos, de indisponibilidades
+        causadas por terceiros ou de decisões tomadas exclusivamente com base
+        em informações que estejam claramente sujeitas a atualização.
+      </p>
+      <p>
+        Nada nestes Termos pretende excluir ou limitar direitos e garantias que
+        não possam ser afastados pela legislação brasileira aplicável.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">11</div>
+      <h2>Alterações destes Termos</h2>
+      <p>
+        Estes Termos poderão ser atualizados para refletir mudanças no site,
+        nos produtos, nas práticas da Precabura Labs ou em requisitos legais e
+        regulatórios.
+      </p>
+      <p>
+        A versão vigente será aquela publicada nesta página, acompanhada da
+        respectiva data de atualização. Recomenda-se a consulta periódica deste
+        documento.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">12</div>
+      <h2>Legislação aplicável</h2>
+      <p>
+        Estes Termos são regidos pela legislação da República Federativa do
+        Brasil. Eventuais controvérsias deverão observar as normas brasileiras
+        aplicáveis, inclusive as regras de proteção do consumidor quando
+        incidentes à relação concreta.
+      </p>
+    </section>
+
+    <section class="term-section">
+      <div class="term-number">13</div>
+      <h2>Contato</h2>
+      <p>
+        Dúvidas relacionadas a estes Termos ou ao site institucional podem ser
+        encaminhadas à Precabura Labs pelo e-mail:
+        <a class="contact-link" href="mailto:precaburalabs@gmail.com">
+          precaburalabs@gmail.com
+        </a>.
+      </p>
+      <p>
+        Precabura Labs · Fortaleza, Ceará, Brasil.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <img
+        class="footer-logo"
+        src="/precabura-labs-logo-branco-monocromatico.png"
+        alt="Precabura Labs"
+      >
+
+      <div class="footer-links">
+        <a href="/">Início</a>
+        <a href="/orcafacil_site/">OrçaFácil</a>
+        <a href="mailto:precaburalabs@gmail.com">Contato</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Precabura Labs. Todos os direitos reservados.</span>
+      <span>Fortaleza · Ceará · Brasil</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<!-- Versão disponibilizada ao usuário em 26/09/2026 às 11:42. -->
