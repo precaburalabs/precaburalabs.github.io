@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Termos de Uso do aplicativo OrçaFácil, desenvolvido pela Precabura Labs.">
+  <meta name="theme-color" content="#246BFD">
+  <title>Termos de Uso | OrçaFácil</title>
+
+  <style>
+    :root {
+      --azul: #246BFD;
+      --azul-escuro: #1854CF;
+      --azul-claro: #EAF1FF;
+      --obsidiana: #0F1417;
+      --titulo: #172033;
+      --texto: #273044;
+      --texto-suave: #647086;
+      --branco: #FFFFFF;
+      --borda: #E5EAF2;
+      --fundo: #F6F8FC;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--azul-escuro);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--azul);
+    }
+
+    .topbar {
+      background: var(--titulo);
+      color: var(--branco);
+      border-bottom: 3px solid var(--azul);
+    }
+
+    .topbar-inner {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -0.6px;
+    }
+
+    .back-link {
+      color: #E8ECF5;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      color: var(--branco);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 82% 14%, rgba(36, 107, 253, 0.30), transparent 30%),
+        linear-gradient(135deg, #172033 0%, #0F1417 78%);
+      color: var(--branco);
+    }
+
+    .hero-inner {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0 66px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #8EB4FF;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 20px 0 0;
+      color: #D5DCEB;
+      font-size: 18px;
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: #EDF2FF;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    main {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 46px 0 70px;
+    }
+
+    .notice {
+      margin-bottom: 30px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--azul);
+      border-radius: 0 14px 14px 0;
+      background: var(--azul-claro);
+    }
+
+    .notice strong {
+      color: var(--titulo);
+    }
+
+    article {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 18px 45px rgba(23, 32, 51, 0.06);
+    }
+
+    section + section {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--borda);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--titulo);
+      font-size: 23px;
+      line-height: 1.3;
+      letter-spacing: -0.35px;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      color: var(--titulo);
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 10px 0 14px;
+      padding-left: 23px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .plan-box {
+      margin: 18px 0;
+      padding: 20px 22px;
+      border: 1px solid #D8E3FF;
+      border-radius: 15px;
+      background: #F7F9FF;
+    }
+
+    .plan-box strong {
+      color: var(--titulo);
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid #D8E3FF;
+      border-radius: 15px;
+      background: #F7F9FF;
+    }
+
+    .contact-box p:last-child,
+    .plan-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: var(--titulo);
+      color: #BFC8D8;
+    }
+
+    .footer-inner {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .footer-inner a {
+      color: #EDF2FF;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        padding: 17px 0;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+
+      .back-link {
+        font-size: 13px;
+      }
+
+      .hero-inner {
+        padding: 52px 0 50px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      main {
+        padding-top: 30px;
+      }
+
+      article {
+        border-radius: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/orcafacil_site/" aria-label="OrçaFácil - página inicial">
+        <span class="brand-mark" aria-hidden="true">R$</span>
+        <span>ORÇAFÁCIL</span>
+      </a>
+      <a class="back-link" href="/orcafacil_site/">← Voltar ao OrçaFácil</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">OrçaFácil · Precabura Labs</p>
+      <h1>Termos de Uso</h1>
+      <p>
+        Estes Termos estabelecem as condições de acesso e utilização do aplicativo
+        OrçaFácil e dos recursos disponibilizados pela Precabura Labs.
+      </p>
+      <span class="updated">Última atualização: 27 de setembro de 2026</span>
+    </div>
+  </section>
+
+  <main>
+    <div class="notice">
+      <strong>Importante:</strong> ao instalar, acessar ou utilizar o OrçaFácil, você
+      declara ter lido e compreendido estes Termos de Uso. Recursos pagos, quando
+      disponibilizados, também estarão sujeitos às condições apresentadas no momento
+      da compra e às regras aplicáveis do Google Play.
+    </div>
+
+    <article>
+      <section id="sobre">
+        <h2>1. Sobre o OrçaFácil</h2>
+        <p>
+          O <strong>OrçaFácil</strong> é um aplicativo desenvolvido pela
+          <strong>Precabura Labs</strong> para auxiliar profissionais autônomos,
+          prestadores de serviços e pequenos negócios na criação, organização,
+          gerenciamento e compartilhamento de orçamentos comerciais.
+        </p>
+        <p>
+          O aplicativo funciona como ferramenta de apoio. O usuário continua sendo
+          responsável pelas informações inseridas, pelos valores calculados ou
+          definidos, pelas condições comerciais utilizadas e pelas relações mantidas
+          com seus próprios clientes.
+        </p>
+      </section>
+
+      <section id="aceitacao">
+        <h2>2. Aceitação dos Termos</h2>
+        <p>
+          O uso do OrçaFácil está condicionado à observância destes Termos, da
+          <a href="/orcafacil_site/privacidade/">Política de Privacidade do OrçaFácil</a>
+          e das regras aplicáveis da plataforma por meio da qual o aplicativo for
+          distribuído.
+        </p>
+        <p>
+          Caso você não concorde com estas condições, deverá deixar de utilizar o
+          aplicativo. Determinados recursos poderão apresentar informações ou condições
+          adicionais antes de sua utilização ou contratação.
+        </p>
+      </section>
+
+      <section id="licenca">
+        <h2>3. Licença de uso</h2>
+        <p>
+          A Precabura Labs concede ao usuário uma licença limitada, pessoal, revogável,
+          não exclusiva e intransferível para instalar e utilizar o OrçaFácil em
+          dispositivos compatíveis, exclusivamente de acordo com estes Termos e com a
+          legislação aplicável.
+        </p>
+        <p>
+          A disponibilização do aplicativo não transfere ao usuário qualquer direito de
+          propriedade sobre o software, sua marca, código, interface, elementos visuais
+          ou demais ativos protegidos.
+        </p>
+      </section>
+
+      <section id="gratuito">
+        <h2>4. Plano gratuito</h2>
+        <p>
+          O OrçaFácil pode ser utilizado gratuitamente, observados os limites e as
+          condições apresentados no próprio aplicativo.
+        </p>
+
+        <div class="plan-box">
+          <p><strong>Regra atual de criação gratuita:</strong> até 5 novos orçamentos por mês-calendário.</p>
+        </div>
+
+        <p>Para fins dessa cota:</p>
+        <ul>
+          <li>a criação de um novo orçamento consome uma unidade da cota mensal;</li>
+          <li>a duplicação de um orçamento é considerada criação de um novo orçamento e consome uma unidade;</li>
+          <li>editar, visualizar ou compartilhar novamente um orçamento já existente não consome nova unidade;</li>
+          <li>excluir um orçamento não devolve à cota a unidade já utilizada;</li>
+          <li>a cota é renovada de acordo com o ciclo mensal definido pelo aplicativo.</li>
+        </ul>
+        <p>
+          O plano gratuito poderá exibir publicidade e poderá apresentar identificação
+          do OrçaFácil em documentos gerados pelo aplicativo.
+        </p>
+      </section>
+
+      <section id="pro">
+        <h2>5. OrçaFácil PRO</h2>
+        <p>
+          A Precabura Labs poderá oferecer modalidades pagas do OrçaFácil PRO. Quando
+          disponíveis para contratação, os benefícios, preços, periodicidade e demais
+          condições serão apresentados no aplicativo e/ou na página de compra do Google
+          Play antes da confirmação da transação.
+        </p>
+        <p>Entre os recursos PRO atualmente previstos estão:</p>
+        <ul>
+          <li>criação de orçamentos sem o limite mensal do plano gratuito;</li>
+          <li>uso do aplicativo sem anúncios;</li>
+          <li>geração de PDF sem a identificação promocional do OrçaFácil;</li>
+          <li>recursos de backup e restauração;</li>
+          <li>personalizações e outros recursos identificados no aplicativo como PRO.</li>
+        </ul>
+        <p>
+          A disponibilidade de cada recurso depende da versão instalada, da plataforma,
+          da compatibilidade técnica e das condições apresentadas no momento da compra.
+        </p>
+      </section>
+
+      <section id="assinaturas">
+        <h2>6. Assinaturas PRO</h2>
+        <p>
+          Quando disponibilizadas, as assinaturas PRO poderão ser oferecidas em
+          diferentes ciclos de faturamento, como semanal, mensal ou anual. O preço
+          aplicável, a moeda, o período de cobrança e eventuais ofertas serão aqueles
+          exibidos pelo Google Play no momento da contratação.
+        </p>
+        <p>
+          Assinaturas com renovação automática serão renovadas e cobradas conforme as
+          condições apresentadas pelo Google Play, salvo se o usuário cancelar a
+          renovação. A desinstalação do OrçaFácil, por si só, não cancela uma assinatura.
+        </p>
+        <p>
+          O gerenciamento e o cancelamento devem ser realizados pela conta Google
+          utilizada na compra, de acordo com os mecanismos disponibilizados pelo Google
+          Play. Em regra, após o cancelamento, o acesso aos benefícios permanece até o
+          término do período já pago, ressalvadas situações diferentes previstas pela
+          plataforma ou pela legislação aplicável.
+        </p>
+      </section>
+
+      <section id="vitalicio">
+        <h2>7. PRO Vitalício</h2>
+        <p>
+          A Precabura Labs também poderá disponibilizar uma modalidade de pagamento
+          único denominada <strong>PRO Vitalício</strong>. Quando oferecida, a compra
+          dará acesso aos <strong>recursos PRO atuais</strong> indicados na oferta, sem
+          cobrança recorrente de assinatura, enquanto o OrçaFácil e esses recursos forem
+          mantidos e tecnicamente suportados nas condições aplicáveis.
+        </p>
+        <p>
+          A expressão “vitalício” refere-se à licença do produto adquirida por pagamento
+          único e não constitui promessa de que todo recurso, serviço ou produto futuro
+          da Precabura Labs será incluído gratuitamente, nem garantia de disponibilidade
+          perpétua do aplicativo independentemente de fatores técnicos, legais ou de
+          plataforma.
+        </p>
+        <p>
+          A validação e eventual restauração da compra poderão depender da conta Google
+          utilizada na aquisição e dos registros mantidos pelo Google Play.
+        </p>
+      </section>
+
+      <section id="pagamentos">
+        <h2>8. Pagamentos, preços e faturamento</h2>
+        <p>
+          Compras de recursos digitais realizadas no aplicativo distribuído pelo Google
+          Play serão processadas pelo sistema de faturamento da plataforma, quando
+          exigido pelas regras aplicáveis.
+        </p>
+        <p>
+          Os preços podem variar conforme país, moeda, tributos, promoções, condições da
+          plataforma e alterações comerciais. O valor efetivamente aplicável será sempre
+          apresentado antes da confirmação da compra.
+        </p>
+        <p>
+          A Precabura Labs não recebe nem armazena diretamente os dados completos do
+          cartão ou de outros meios de pagamento utilizados no Google Play.
+        </p>
+      </section>
+
+      <section id="reembolsos">
+        <h2>9. Cancelamentos e reembolsos</h2>
+        <p>
+          Solicitações de cancelamento, reembolso ou contestação de compras realizadas
+          pelo Google Play estão sujeitas às regras da plataforma e à legislação
+          aplicável ao usuário.
+        </p>
+        <p>
+          Em determinadas situações, o Google Play poderá processar diretamente uma
+          solicitação. Quando o atendimento depender do desenvolvedor, o usuário poderá
+          entrar em contato com a Precabura Labs pelo canal informado ao final destes
+          Termos.
+        </p>
+        <p>
+          Nenhuma disposição destes Termos limita direitos de reembolso, arrependimento
+          ou outras garantias que sejam obrigatórias pela legislação aplicável.
+        </p>
+      </section>
+
+      <section id="anuncios">
+        <h2>10. Publicidade no plano gratuito</h2>
+        <p>
+          A versão gratuita do OrçaFácil poderá exibir anúncios fornecidos por serviços
+          de publicidade de terceiros. A presença, frequência e formato dos anúncios
+          podem variar ao longo do tempo, respeitando a experiência de uso e as regras
+          das plataformas envolvidas.
+        </p>
+        <p>
+          As informações sobre tratamento de dados relacionado à publicidade e aos
+          serviços utilizados pelo aplicativo estão descritas na
+          <a href="/orcafacil_site/privacidade/">Política de Privacidade do OrçaFácil</a>.
+        </p>
+      </section>
+
+      <section id="dados-locais">
+        <h2>11. Dados, armazenamento local e responsabilidade por backup</h2>
+        <p>
+          O OrçaFácil foi concebido com funcionamento predominantemente local. Dados de
+          orçamentos, clientes, catálogo, configurações e outras informações criadas pelo
+          usuário podem ser armazenados no próprio dispositivo.
+        </p>
+        <p>
+          Salvo quando houver recurso específico que indique o contrário, a Precabura
+          Labs não mantém uma cópia central dos dados comerciais inseridos pelo usuário.
+          Por isso, perda, dano, substituição, restauração de fábrica, falha do aparelho,
+          desinstalação do aplicativo ou exclusão de dados podem resultar em perda de
+          informações.
+        </p>
+        <p>
+          Quando recursos de backup e restauração estiverem disponíveis, cabe ao usuário
+          utilizá-los adequadamente, conservar os arquivos gerados em local seguro e
+          verificar a integridade das informações importantes.
+        </p>
+      </section>
+
+      <section id="orcamentos">
+        <h2>12. Orçamentos, cálculos e documentos gerados</h2>
+        <p>
+          O OrçaFácil auxilia na organização de informações e na geração de documentos,
+          mas não substitui a conferência profissional ou comercial do usuário.
+        </p>
+        <p>É responsabilidade do usuário verificar, antes de utilizar ou enviar um orçamento:</p>
+        <ul>
+          <li>dados próprios e de seus clientes;</li>
+          <li>descrições de produtos e serviços;</li>
+          <li>quantidades, preços, descontos, acréscimos, tributos e valores finais;</li>
+          <li>prazos, condições de pagamento, validade e demais condições comerciais;</li>
+          <li>adequação do documento às exigências legais, fiscais, profissionais ou contratuais aplicáveis à sua atividade.</li>
+        </ul>
+        <p>
+          O OrçaFácil não participa da relação comercial entre o usuário e seus clientes
+          e não garante aceitação, pagamento, execução ou resultado de qualquer proposta
+          ou orçamento emitido com auxílio do aplicativo.
+        </p>
+      </section>
+
+      <section id="conteudo-usuario">
+        <h2>13. Conteúdo inserido pelo usuário</h2>
+        <p>
+          O usuário é responsável pela legitimidade, exatidão e licitude dos dados,
+          textos, imagens, logotipos, informações de clientes e demais conteúdos que
+          inserir ou utilizar no OrçaFácil.
+        </p>
+        <p>
+          O usuário deve possuir autorização ou outra base legítima para utilizar dados
+          pessoais, marcas, imagens e conteúdos de terceiros inseridos no aplicativo ou
+          em documentos por ele gerados.
+        </p>
+      </section>
+
+      <section id="uso-adequado">
+        <h2>14. Uso adequado</h2>
+        <p>O usuário compromete-se a não utilizar o OrçaFácil para:</p>
+        <ul>
+          <li>praticar fraude, falsidade, golpe ou qualquer atividade ilícita;</li>
+          <li>produzir ou compartilhar conteúdo que viole direitos de terceiros;</li>
+          <li>tentar acessar, alterar, contornar ou comprometer mecanismos de segurança, licenciamento, monetização ou funcionamento do aplicativo;</li>
+          <li>realizar engenharia reversa, distribuir cópias não autorizadas ou explorar o software fora das hipóteses permitidas pela legislação;</li>
+          <li>utilizar o aplicativo de forma que possa causar dano à Precabura Labs, à infraestrutura de terceiros ou a outros usuários.</li>
+        </ul>
+      </section>
+
+      <section id="terceiros">
+        <h2>15. Serviços de terceiros</h2>
+        <p>
+          O OrçaFácil pode depender de serviços, bibliotecas e plataformas de terceiros,
+          incluindo recursos do sistema operacional, Google Play, serviços de
+          publicidade, compartilhamento de arquivos e outros componentes necessários ao
+          funcionamento de determinadas funcionalidades.
+        </p>
+        <p>
+          Esses serviços podem possuir termos e políticas próprios. Indisponibilidades,
+          alterações ou restrições impostas por terceiros podem afetar determinadas
+          funcionalidades do aplicativo.
+        </p>
+      </section>
+
+      <section id="privacidade">
+        <h2>16. Privacidade e proteção de dados</h2>
+        <p>
+          As práticas relacionadas a dados pessoais, armazenamento, publicidade,
+          serviços de terceiros e demais aspectos de privacidade são descritas na
+          <a href="/orcafacil_site/privacidade/">Política de Privacidade do OrçaFácil</a>,
+          que integra estes Termos para fins de informação ao usuário.
+        </p>
+      </section>
+
+      <section id="propriedade">
+        <h2>17. Propriedade intelectual</h2>
+        <p>
+          O OrçaFácil, sua marca, identidade visual, interfaces, código, textos,
+          elementos gráficos, materiais e demais componentes próprios são protegidos
+          pela legislação aplicável e pertencem à Precabura Labs ou são utilizados de
+          forma legítima mediante licença ou autorização.
+        </p>
+        <p>
+          Estes Termos não concedem ao usuário direito de registrar, reproduzir,
+          comercializar ou explorar a marca OrçaFácil, a marca Precabura Labs ou o
+          software fora das permissões expressamente concedidas.
+        </p>
+      </section>
+
+      <section id="disponibilidade">
+        <h2>18. Disponibilidade, manutenção e atualizações</h2>
+        <p>
+          A Precabura Labs poderá corrigir erros, realizar manutenção, atualizar o
+          aplicativo, alterar requisitos técnicos e modificar funcionalidades para fins
+          de segurança, compatibilidade, melhoria do produto, adequação legal ou evolução
+          comercial.
+        </p>
+        <p>
+          Não é possível garantir funcionamento ininterrupto em todos os dispositivos ou
+          versões de sistema operacional. Algumas atualizações poderão ser necessárias
+          para continuidade do uso ou de determinados recursos.
+        </p>
+      </section>
+
+      <section id="alteracoes-planos">
+        <h2>19. Alterações de planos e funcionalidades</h2>
+        <p>
+          A Precabura Labs poderá modificar futuramente características do plano
+          gratuito, benefícios PRO, preços, ofertas e funcionalidades, observadas as
+          compras já realizadas, as condições informadas ao usuário, as regras do Google
+          Play e a legislação aplicável.
+        </p>
+        <p>
+          Mudanças relevantes que afetem assinaturas ou direitos de usuários serão
+          tratadas conforme as obrigações de informação e demais regras aplicáveis.
+        </p>
+      </section>
+
+      <section id="responsabilidade">
+        <h2>20. Limitação de responsabilidade</h2>
+        <p>
+          Na extensão permitida pela legislação aplicável, a Precabura Labs não será
+          responsável por prejuízos decorrentes de informações incorretas inseridas pelo
+          usuário, decisões comerciais tomadas pelo usuário, uso inadequado do aplicativo,
+          perda de dados causada por ausência de backup ou por eventos fora de seu controle
+          razoável, nem por falhas de serviços de terceiros.
+        </p>
+        <p>
+          Nada nestes Termos exclui ou limita direitos e garantias que não possam ser
+          afastados pela legislação brasileira, inclusive quando aplicáveis as normas de
+          proteção do consumidor.
+        </p>
+      </section>
+
+      <section id="suspensao">
+        <h2>21. Suspensão ou encerramento</h2>
+        <p>
+          A Precabura Labs poderá restringir funcionalidades ou adotar medidas cabíveis
+          em caso de fraude, violação destes Termos, tentativa de contornar mecanismos de
+          licenciamento ou monetização, risco de segurança ou obrigação legal.
+        </p>
+        <p>
+          O usuário pode deixar de utilizar o OrçaFácil a qualquer momento. A
+          desinstalação do aplicativo não substitui o cancelamento de eventual assinatura
+          ativa no Google Play.
+        </p>
+      </section>
+
+      <section id="alteracoes-termos">
+        <h2>22. Alterações destes Termos</h2>
+        <p>
+          Estes Termos poderão ser atualizados para refletir mudanças no OrçaFácil, em
+          seus modelos de uso e monetização, em serviços de terceiros ou em requisitos
+          legais e regulatórios.
+        </p>
+        <p>
+          A versão vigente será aquela publicada nesta página, acompanhada da data de
+          atualização. Quando necessário, alterações relevantes poderão ser comunicadas
+          também por meio do aplicativo ou de outro canal adequado.
+        </p>
+      </section>
+
+      <section id="legislacao">
+        <h2>23. Legislação aplicável</h2>
+        <p>
+          Estes Termos são regidos pela legislação da República Federativa do Brasil.
+          Eventuais controvérsias deverão observar a legislação aplicável ao caso,
+          inclusive as normas de proteção do consumidor e as regras de competência que
+          não possam ser afastadas contratualmente.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2>24. Contato</h2>
+        <p>
+          Para dúvidas sobre estes Termos, funcionamento do aplicativo ou questões
+          relacionadas a compras que dependam do desenvolvedor, utilize o canal oficial
+          abaixo.
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Aplicativo:</strong> OrçaFácil</p>
+          <p><strong>Desenvolvedor:</strong> Precabura Labs</p>
+          <p><strong>E-mail:</strong> <a href="mailto:precaburalabs@gmail.com">precaburalabs@gmail.com</a></p>
+          <p><strong>Site:</strong> <a href="https://precaburalabs.com.br/orcafacil_site/">precaburalabs.com.br/orcafacil_site/</a></p>
+          <p><strong>Localização:</strong> Fortaleza, Ceará, Brasil</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Precabura Labs · OrçaFácil. Todos os direitos reservados.</span>
+      <span>
+        <a href="/orcafacil_site/">OrçaFácil</a> ·
+        <a href="/orcafacil_site/privacidade/">Política de Privacidade</a> ·
+        <a href="/">Precabura Labs</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- Versão disponibilizada ao usuário em 27/09/2026 às 00:18. -->
