@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade da Precabura Labs.">
+  <meta name="theme-color" content="#0F1417">
+  <title>Política de Privacidade | Precabura Labs</title>
+
+  <style>
+    :root {
+      --obsidiana: #0F1417;
+      --petroleo: #0E5A66;
+      --cobre: #C67F4E;
+      --marfim: #F5EFE6;
+      --branco: #FFFFFF;
+      --texto: #253039;
+      --texto-suave: #64727C;
+      --borda: #E4E7E9;
+      --fundo: #F7F8F8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--petroleo);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--cobre);
+    }
+
+    .topbar {
+      background: var(--obsidiana);
+      color: var(--branco);
+      border-bottom: 3px solid var(--cobre);
+    }
+
+    .topbar-inner {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--petroleo);
+      color: var(--marfim);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .back-link {
+      color: #E8ECEE;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      color: var(--marfim);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 80% 15%, rgba(198, 127, 78, 0.14), transparent 28%),
+        linear-gradient(135deg, #102025 0%, #0F1417 72%);
+      color: var(--branco);
+    }
+
+    .hero-inner {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0 66px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #D8A37D;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 20px 0 0;
+      color: #CDD5D9;
+      font-size: 18px;
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: #E9EDEE;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    main {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 46px 0 70px;
+    }
+
+    .notice {
+      margin-bottom: 30px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--petroleo);
+      border-radius: 0 14px 14px 0;
+      background: #EAF3F4;
+    }
+
+    .notice strong {
+      color: var(--obsidiana);
+    }
+
+    article {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 18px 45px rgba(15, 20, 23, 0.06);
+    }
+
+    section + section {
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--borda);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--obsidiana);
+      font-size: 23px;
+      line-height: 1.3;
+      letter-spacing: -0.35px;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      color: var(--obsidiana);
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 10px 0 14px;
+      padding-left: 23px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid #D8E3E5;
+      border-radius: 15px;
+      background: #F4F8F8;
+    }
+
+    .contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: var(--obsidiana);
+      color: #BFC8CC;
+    }
+
+    .footer-inner {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .footer-inner a {
+      color: var(--marfim);
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        padding: 17px 0;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .back-link {
+        font-size: 13px;
+      }
+
+      .hero-inner {
+        padding: 52px 0 50px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      main {
+        padding-top: 30px;
+      }
+
+      article {
+        border-radius: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Precabura Labs - página inicial">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>PRECABURA LABS</span>
+      </a>
+      <a class="back-link" href="/">← Voltar ao site</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Privacidade e proteção de dados</p>
+      <h1>Política de Privacidade</h1>
+      <p>
+        Este documento explica como a Precabura Labs trata dados pessoais em seu
+        site institucional e nos contatos realizados diretamente com a marca.
+      </p>
+      <span class="updated">Última atualização: 26 de setembro de 2026</span>
+    </div>
+  </section>
+
+  <main>
+    <div class="notice">
+      <strong>Importante:</strong> esta política se refere ao site institucional da
+      Precabura Labs. Aplicativos e produtos digitais da marca podem possuir políticas
+      de privacidade próprias, adequadas às características e aos tratamentos de dados
+      de cada produto.
+    </div>
+
+    <article>
+      <section id="sobre">
+        <h2>1. Sobre esta Política de Privacidade</h2>
+        <p>
+          A Precabura Labs valoriza a privacidade e a proteção dos dados pessoais de
+          visitantes, usuários, clientes, parceiros e demais pessoas que entrem em
+          contato com a marca.
+        </p>
+        <p>
+          Esta Política de Privacidade descreve, de forma transparente, quais dados
+          pessoais podem ser tratados no contexto do site institucional, para quais
+          finalidades, em quais situações pode ocorrer compartilhamento, por quanto
+          tempo os dados podem ser mantidos e quais são os direitos dos titulares,
+          observada a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais
+          (LGPD) e demais normas aplicáveis.
+        </p>
+      </section>
+
+      <section id="abrangencia">
+        <h2>2. Abrangência</h2>
+        <p>Esta política se aplica ao tratamento de dados relacionado:</p>
+        <ul>
+          <li>à navegação no site institucional da Precabura Labs;</li>
+          <li>a contatos realizados por e-mail ou outros canais oficiais divulgados pela marca;</li>
+          <li>a solicitações de suporte, informações, propostas ou parcerias encaminhadas à Precabura Labs;</li>
+          <li>a comunicações relacionadas aos produtos e serviços da marca, quando não houver política específica aplicável.</li>
+        </ul>
+        <p>
+          Produtos e aplicativos que possuam política própria serão regidos pelo
+          respectivo documento quanto aos tratamentos de dados realizados dentro desses
+          produtos.
+        </p>
+      </section>
+
+      <section id="dados">
+        <h2>3. Dados pessoais que podem ser tratados</h2>
+        <p>
+          A Precabura Labs procura limitar o tratamento ao que for adequado e necessário
+          para cada finalidade. Dependendo da forma de interação, podem ser tratados:
+        </p>
+
+        <h3>3.1. Dados fornecidos pelo próprio titular</h3>
+        <ul>
+          <li>nome;</li>
+          <li>endereço de e-mail;</li>
+          <li>telefone, quando fornecido voluntariamente;</li>
+          <li>empresa, atividade profissional ou função, quando informadas;</li>
+          <li>conteúdo de mensagens, solicitações, dúvidas, propostas ou comunicações enviadas à Precabura Labs;</li>
+          <li>outros dados que o próprio titular decida fornecer durante o contato.</li>
+        </ul>
+
+        <h3>3.2. Dados técnicos de navegação</h3>
+        <p>
+          A infraestrutura utilizada para disponibilizar o site pode processar
+          informações técnicas necessárias ao funcionamento, segurança e entrega das
+          páginas, como endereço IP, data e horário de acesso, tipo de navegador,
+          sistema operacional, páginas ou recursos solicitados e informações técnicas
+          semelhantes.
+        </p>
+      </section>
+
+      <section id="finalidades">
+        <h2>4. Finalidades do tratamento</h2>
+        <p>Os dados pessoais podem ser tratados para:</p>
+        <ul>
+          <li>responder mensagens, dúvidas e solicitações;</li>
+          <li>prestar suporte e manter comunicação relacionada a produtos ou serviços;</li>
+          <li>avaliar propostas comerciais, parcerias ou outros contatos recebidos;</li>
+          <li>manter a segurança, a disponibilidade e o funcionamento adequado do site;</li>
+          <li>prevenir abusos, fraudes, incidentes de segurança e usos indevidos;</li>
+          <li>cumprir obrigações legais, regulatórias ou determinações de autoridades competentes;</li>
+          <li>exercer ou defender direitos em processos judiciais, administrativos ou arbitrais, quando necessário.</li>
+        </ul>
+      </section>
+
+      <section id="bases-legais">
+        <h2>5. Bases legais</h2>
+        <p>
+          O tratamento de dados pessoais será realizado conforme as hipóteses legais
+          aplicáveis previstas na LGPD. Conforme o contexto, isso pode incluir, entre
+          outras, o consentimento do titular, a execução de contrato ou de procedimentos
+          preliminares relacionados a contrato, o cumprimento de obrigação legal ou
+          regulatória, o exercício regular de direitos e o legítimo interesse, quando
+          aplicável e respeitados os direitos e as liberdades fundamentais do titular.
+        </p>
+      </section>
+
+      <section id="cookies">
+        <h2>6. Cookies e tecnologias semelhantes</h2>
+        <p>
+          A Precabura Labs não utiliza intencionalmente cookies próprios para publicidade
+          comportamental no site institucional. Entretanto, a infraestrutura de
+          hospedagem, recursos incorporados ou serviços de terceiros eventualmente
+          utilizados pelo site podem empregar tecnologias técnicas necessárias à
+          prestação de seus serviços.
+        </p>
+        <p>
+          Caso sejam implementadas futuramente ferramentas de análise, publicidade ou
+          outras tecnologias que alterem de forma relevante o tratamento de dados, esta
+          política será atualizada e, quando necessário, serão adotados mecanismos
+          adicionais de informação ou consentimento.
+        </p>
+      </section>
+
+      <section id="compartilhamento">
+        <h2>7. Compartilhamento de dados</h2>
+        <p>
+          A Precabura Labs não comercializa dados pessoais. O compartilhamento poderá
+          ocorrer somente quando necessário para as finalidades descritas nesta política,
+          incluindo situações como:
+        </p>
+        <ul>
+          <li>fornecedores de infraestrutura, hospedagem, comunicação ou serviços tecnológicos necessários ao funcionamento do site e dos canais de contato;</li>
+          <li>prestadores de serviços que atuem em apoio às atividades da Precabura Labs, sujeitos às obrigações aplicáveis de proteção de dados;</li>
+          <li>autoridades públicas, órgãos reguladores ou terceiros quando houver obrigação legal, ordem válida ou necessidade de exercício regular de direitos;</li>
+          <li>operações societárias ou reorganizações legítimas, quando aplicável e observadas as exigências legais.</li>
+        </ul>
+      </section>
+
+      <section id="terceiros">
+        <h2>8. Sites e serviços de terceiros</h2>
+        <p>
+          O site pode conter links para páginas, lojas, plataformas ou serviços mantidos
+          por terceiros. Ao acessar esses ambientes, o tratamento de dados passa a ser
+          regido também pelas políticas e práticas dos respectivos responsáveis.
+        </p>
+        <p>
+          A Precabura Labs recomenda que o usuário consulte as políticas de privacidade
+          dos serviços de terceiros antes de fornecer dados pessoais nesses ambientes.
+        </p>
+      </section>
+
+      <section id="armazenamento">
+        <h2>9. Armazenamento, retenção e eliminação</h2>
+        <p>
+          Os dados pessoais serão mantidos somente pelo período necessário ao cumprimento
+          das finalidades para as quais foram tratados, ao atendimento de obrigações
+          legais ou regulatórias, ao exercício regular de direitos ou a outras hipóteses
+          legítimas previstas na legislação aplicável.
+        </p>
+        <p>
+          Encerrada a necessidade de tratamento, os dados poderão ser eliminados,
+          anonimizados ou mantidos quando sua conservação for permitida ou exigida por lei.
+        </p>
+      </section>
+
+      <section id="seguranca">
+        <h2>10. Segurança</h2>
+        <p>
+          A Precabura Labs adota medidas técnicas e administrativas razoáveis e
+          compatíveis com a natureza de suas atividades para reduzir riscos de acesso
+          não autorizado, perda, alteração, divulgação ou destruição indevida de dados
+          pessoais.
+        </p>
+        <p>
+          Nenhum ambiente digital é completamente imune a riscos. Caso seja identificado
+          incidente de segurança envolvendo dados pessoais, serão adotadas as medidas
+          cabíveis de acordo com a legislação e a regulamentação aplicáveis.
+        </p>
+      </section>
+
+      <section id="direitos">
+        <h2>11. Direitos dos titulares</h2>
+        <p>
+          Nos termos da LGPD e observadas as condições legais aplicáveis, o titular pode
+          solicitar, entre outros direitos:
+        </p>
+        <ul>
+          <li>confirmação da existência de tratamento;</li>
+          <li>acesso aos dados pessoais;</li>
+          <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+          <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD;</li>
+          <li>portabilidade, quando aplicável e conforme regulamentação;</li>
+          <li>informações sobre compartilhamentos realizados;</li>
+          <li>informações sobre a possibilidade de não fornecer consentimento e suas consequências, quando aplicável;</li>
+          <li>revogação do consentimento, quando essa for a base legal utilizada;</li>
+          <li>eliminação de dados tratados com consentimento, ressalvadas as hipóteses legais de conservação;</li>
+          <li>oposição a tratamento nas hipóteses previstas em lei;</li>
+          <li>revisão de decisões tomadas unicamente com base em tratamento automatizado, quando aplicável.</li>
+        </ul>
+        <p>
+          A Precabura Labs poderá solicitar informações necessárias para confirmar a
+          identidade do requerente e proteger os dados contra acesso ou alteração por
+          terceiros não autorizados.
+        </p>
+      </section>
+
+      <section id="criancas">
+        <h2>12. Crianças e adolescentes</h2>
+        <p>
+          O site institucional da Precabura Labs não é direcionado especificamente à
+          coleta de dados pessoais de crianças. Caso seja identificada situação que
+          envolva dados de crianças ou adolescentes, o tratamento será avaliado de acordo
+          com as exigências legais aplicáveis e com a proteção de seu melhor interesse.
+        </p>
+      </section>
+
+      <section id="transferencia">
+        <h2>13. Tratamento por serviços localizados no exterior</h2>
+        <p>
+          Alguns fornecedores de infraestrutura ou serviços digitais podem processar ou
+          armazenar informações em outros países. Quando houver transferência internacional
+          de dados pessoais, serão observados os requisitos aplicáveis da legislação
+          brasileira de proteção de dados.
+        </p>
+      </section>
+
+      <section id="alteracoes">
+        <h2>14. Alterações desta política</h2>
+        <p>
+          Esta Política de Privacidade poderá ser atualizada para refletir mudanças no
+          site, nos serviços, nas práticas de tratamento de dados ou na legislação.
+          A versão vigente será aquela publicada nesta página, acompanhada da data de sua
+          última atualização.
+        </p>
+        <p>
+          Alterações relevantes poderão ser destacadas no site ou comunicadas por outros
+          meios adequados, quando necessário.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2>15. Contato e exercício de direitos</h2>
+        <p>
+          Para dúvidas sobre esta Política de Privacidade ou para exercer direitos
+          relacionados a dados pessoais tratados pela Precabura Labs, utilize o canal
+          oficial abaixo.
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Responsável pelo tratamento:</strong> Precabura Labs</p>
+          <p><strong>E-mail:</strong> <a href="mailto:precaburalabs@gmail.com">precaburalabs@gmail.com</a></p>
+          <p><strong>Site:</strong> <a href="https://precaburalabs.com.br/">precaburalabs.com.br</a></p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Precabura Labs. Todos os direitos reservados.</span>
+      <span>
+        <a href="/">Início</a> ·
+        <a href="/termos/">Termos de Uso</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- Versão disponibilizada ao usuário em 26/09/2026. -->
