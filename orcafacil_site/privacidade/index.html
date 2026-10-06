@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -297,7 +296,7 @@
         Esta Política de Privacidade explica como o aplicativo OrçaFácil,
         desenvolvido pela Precabura Labs, trata dados e informações durante sua utilização.
       </p>
-      <span class="updated">Última atualização: 1º de outubro de 2026</span>
+      <span class="updated">Última atualização: 6 de outubro de 2026</span>
     </div>
   </section>
 
@@ -372,23 +371,52 @@
           aplicativo escolhido pelo próprio usuário.
         </p>
         <p>
-          O aplicativo oferece backup local manual e pode oferecer, nos planos elegíveis,
-          backup e restauração em nuvem vinculados a uma conta Google escolhida pelo usuário.
+          O aplicativo oferece backup local manual e, nos planos elegíveis, backup e
+          restauração em nuvem vinculados a uma conta Google escolhida pelo usuário.
           A autorização é realizada pelo fluxo oficial do Google, sem que o OrçaFácil ou a
-          Precabura Labs recebam a senha da conta.
+          Precabura Labs recebam a senha da conta Google.
         </p>
         <p>
           No backup em nuvem, o arquivo é armazenado em uma área privada específica do
           aplicativo no Google Drive. O OrçaFácil pode tratar o endereço de e-mail da conta
           vinculada, identificadores técnicos necessários à autorização e metadados de
-          funcionamento do backup, como data do último backup e estado de sincronização.
+          funcionamento do backup, como data do último backup, estado de sincronização e
+          informações técnicas necessárias para restauração.
         </p>
         <p>
           O conteúdo do backup pode incluir dados cadastrados no aplicativo, como empresa,
           logotipo, PIX, clientes, produtos, serviços, orçamentos e itens dos orçamentos.
-          O arquivo é transmitido por conexão protegida pelos mecanismos dos serviços
-          envolvidos. Na versão atual, o OrçaFácil não aplica uma camada própria adicional
-          de criptografia ao conteúdo do arquivo antes do envio ao Google Drive.
+          Antes do envio ao Google Drive, os backups em nuvem são protegidos pelo próprio
+          OrçaFácil com criptografia autenticada AES-256-GCM.
+        </p>
+        <div class="info-box">
+          <p>
+            <strong>Código de recuperação:</strong> ao configurar a proteção em nuvem, o
+            OrçaFácil pode apresentar ao usuário um código de recuperação vinculado ao
+            material criptográfico daquela conta. Esse código pode ser necessário para
+            recuperar um backup após troca de aparelho, reinstalação do aplicativo ou perda
+            das chaves locais.
+          </p>
+          <p>
+            A Precabura Labs <strong>não recebe nem mantém uma cópia</strong> desse código de
+            recuperação. O usuário é responsável por guardá-lo em local seguro e privado.
+            Se o código for perdido juntamente com as chaves locais do aparelho, poderá não
+            ser possível recuperar o conteúdo do backup criptografado.
+          </p>
+        </div>
+        <p>
+          Os backups locais manuais criados nas versões atuais do OrçaFácil também podem ser
+          protegidos por senha escolhida pelo próprio usuário. Essa senha é utilizada
+          localmente para derivar a chave de recuperação necessária à descriptografia do
+          arquivo e não é enviada nem armazenada pela Precabura Labs. Se a senha for perdida,
+          o arquivo criptografado poderá se tornar irrecuperável.
+        </p>
+        <p>
+          Backups antigos gerados em formato legado podem continuar compatíveis para fins de
+          restauração, conforme a versão do arquivo. O OrçaFácil não substitui
+          silenciosamente um backup criptografado existente quando as chaves correspondentes
+          não estão disponíveis no aparelho; nesses casos, o fluxo de recuperação deve ser
+          utilizado primeiro.
         </p>
       </section>
 
@@ -502,9 +530,21 @@
           reduzir riscos de acesso, alteração, perda ou uso indevido das informações.
         </p>
         <p>
+          Os backups em nuvem criados nas versões atuais utilizam criptografia autenticada
+          própria antes do envio ao Google Drive. As chaves criptográficas locais são
+          armazenadas utilizando mecanismos seguros disponibilizados pela plataforma, e o
+          código de recuperação deve ser mantido sob controle do próprio usuário.
+        </p>
+        <p>
+          Nos backups locais protegidos por senha, a senha não é enviada à Precabura Labs e
+          é usada localmente para permitir a recuperação do material criptográfico necessário
+          à descriptografia do arquivo.
+        </p>
+        <p>
           Nenhum método de armazenamento ou transmissão eletrônica pode garantir
           segurança absoluta. O usuário também deve proteger o próprio dispositivo,
-          arquivos exportados, backups e meios de acesso utilizados.
+          arquivos exportados, backups, senhas, códigos de recuperação e meios de acesso
+          utilizados.
         </p>
       </section>
 
@@ -614,4 +654,4 @@
 </body>
 </html>
 
-<!-- Build 4 — Política de Privacidade atualizada em 01/10/2026 para refletir backup em nuvem, suporte HTTPS e diagnóstico técnico opcional. -->
+<!-- Build 4 — Política de Privacidade atualizada em 06/10/2026 para refletir criptografia própria dos backups, código de recuperação, senha de backup manual, backup em nuvem, suporte HTTPS e diagnóstico técnico opcional. -->
